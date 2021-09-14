@@ -1,0 +1,185 @@
+flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+flutter: RiverpodTestWidget: build, id = 2
+flutter: StreamNotifierProvider watcher(2): disposed
+flutter: StreamNotifierProvider watcher(2): value = 4
+flutter: RiverpodTestWidget: read a value from the watcher, value = 4
+flutter: StreamProvider watcher(2): disposed
+flutter: StreamProvider watcher(2): value = AsyncValue<String>.data(value: stream(2, 4))
+flutter: [build end]------------------------------
+flutter: RiverpodTestWidget: invoked by the timer, id = 3
+flutter: [timer end]------------------------------
+flutter: _StateNotifierController(2): invoked by the timer, state = 5
+flutter: StreamProvider(2): stream.listen() handled: stream(2, 5)
+flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+flutter: RiverpodTestWidget: build, id = 3
+flutter: StateNotifierProvider(3): created
+flutter: _StateNotifierController(0): startTimer
+flutter: StreamNotifierProvider watcher(3): value = 0
+flutter: RiverpodTestWidget: read a value from the watcher, value = 0
+flutter: StreamProvider(3): created
+flutter: StreamProvider watcher(3): value = AsyncValue<Never>.loading()
+flutter: riverpodTestFamilyProvider(3): created
+flutter: [build end]------------------------------
+flutter: StreamNotifierProvider watcher(2): disposed
+flutter: StreamNotifierProvider watcher(2): value = 5
+flutter: StreamNotifierProvider watcher(2): disposed
+flutter: StreamProvider watcher(2): disposed
+flutter: StreamProvider watcher(2): value = AsyncValue<String>.data(value: stream(2, 5))
+flutter: StreamProvider watcher(2): disposed
+flutter: StreamProvider(2): disposed
+flutter: StateNotifierProvider(2): disposed
+flutter: _StateNotifierController(2): disposed
+flutter: _StateNotifierController(2): timer is cancelled, state = 5
+flutter: _StateNotifierController(3): invoked by the timer, state = 1
+flutter: StreamProvider(3): stream.listen() handled: stream(3, 1)
+flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+flutter: RiverpodTestWidget: build, id = 3
+flutter: StreamNotifierProvider watcher(3): disposed
+flutter: StreamNotifierProvider watcher(3): value = 1
+flutter: RiverpodTestWidget: read a value from the watcher, value = 1
+flutter: StreamProvider watcher(3): disposed
+flutter: StreamProvider watcher(3): value = AsyncValue<String>.data(value: stream(3, 1))
+flutter: [build end]------------------------------
+flutter: _StateNotifierController(3): invoked by the timer, state = 2
+flutter: StreamProvider(3): stream.listen() handled: stream(3, 2)
+flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+flutter: RiverpodTestWidget: build, id = 3
+flutter: StreamNotifierProvider watcher(3): disposed
+flutter: StreamNotifierProvider watcher(3): value = 2
+flutter: RiverpodTestWidget: read a value from the watcher, value = 2
+flutter: StreamProvider watcher(3): disposed
+flutter: StreamProvider watcher(3): value = AsyncValue<String>.data(value: stream(3, 2))
+flutter: [build end]------------------------------
+flutter: _StateNotifierController(3): invoked by the timer, state = 3
+flutter: StreamProvider(3): stream.listen() handled: stream(3, 3)
+flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+flutter: RiverpodTestWidget: build, id = 3
+flutter: StreamNotifierProvider watcher(3): disposed
+flutter: StreamNotifierProvider watcher(3): value = 3
+flutter: RiverpodTestWidget: read a value from the watcher, value = 3
+flutter: StreamProvider watcher(3): disposed
+flutter: StreamProvider watcher(3): value = AsyncValue<String>.data(value: stream(3, 3))
+flutter: [build end]------------------------------
+
+[background]
+flutter: RiverpodTestWidget: invoked by the timer, id = 4
+flutter: [timer end]------------------------------
+flutter: _StateNotifierController(3): invoked by the timer, state = 5
+flutter: StreamProvider(3): stream.listen() handled: stream(3, 5)
+flutter: _StateNotifierController(3): invoked by the timer, state = 6
+flutter: StreamProvider(3): stream.listen() handled: stream(3, 6)
+flutter: _StateNotifierController(3): invoked by the timer, state = 7
+flutter: StreamProvider(3): stream.listen() handled: stream(3, 7)
+flutter: _StateNotifierController(3): invoked by the timer, state = 8
+flutter: StreamProvider(3): stream.listen() handled: stream(3, 8)
+flutter: _StateNotifierController(3): invoked by the timer, state = 9
+flutter: StreamProvider(3): stream.listen() handled: stream(3, 9)
+flutter: RiverpodTestWidget: invoked by the timer, id = 5
+flutter: [timer end]------------------------------
+flutter: _StateNotifierController(3): invoked by the timer, state = 10
+flutter: StreamProvider(3): stream.listen() handled: stream(3, 10)
+flutter: _StateNotifierController(3): invoked by the timer, state = 11
+flutter: StreamProvider(3): stream.listen() handled: stream(3, 11)
+flutter: _StateNotifierController(3): invoked by the timer, state = 12
+flutter: StreamProvider(3): stream.listen() handled: stream(3, 12)
+flutter: _StateNotifierController(3): invoked by the timer, state = 13
+flutter: StreamProvider(3): stream.listen() handled: stream(3, 13)
+flutter: _StateNotifierController(3): invoked by the timer, state = 14
+flutter: StreamProvider(3): stream.listen() handled: stream(3, 14)
+flutter: RiverpodTestWidget: invoked by the timer, id = 6
+flutter: [timer end]------------------------------
+flutter: _StateNotifierController(3): invoked by the timer, state = 15
+flutter: StreamProvider(3): stream.listen() handled: stream(3, 15)
+flutter: _StateNotifierController(3): invoked by the timer, state = 16
+flutter: StreamProvider(3): stream.listen() handled: stream(3, 16)
+flutter: _StateNotifierController(3): invoked by the timer, state = 17
+flutter: StreamProvider(3): stream.listen() handled: stream(3, 17)
+flutter: _StateNotifierController(3): invoked by the timer, state = 18
+flutter: StreamProvider(3): stream.listen() handled: stream(3, 18)
+flutter: _StateNotifierController(3): invoked by the timer, state = 19
+flutter: StreamProvider(3): stream.listen() handled: stream(3, 19)
+
+flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+flutter: RiverpodTestWidget: build, id = 7
+flutter: StateNotifierProvider(7): created
+flutter: _StateNotifierController(0): startTimer
+flutter: StreamNotifierProvider watcher(7): value = 0
+flutter: RiverpodTestWidget: read a value from the watcher, value = 0
+flutter: StreamProvider(7): created
+flutter: StreamProvider watcher(7): value = AsyncValue<Never>.loading()
+flutter: riverpodTestFamilyProvider(7): created
+flutter: [build end]------------------------------
+flutter: StreamNotifierProvider watcher(6): disposed
+flutter: StreamProvider watcher(6): disposed
+flutter: StreamProvider(6): disposed
+flutter: StateNotifierProvider(6): disposed
+flutter: _StateNotifierController(6): disposed
+flutter: _StateNotifierController(6): timer is cancelled, state = 0
+flutter: _StateNotifierController(7): invoked by the timer, state = 1
+flutter: StreamProvider(7): stream.listen() handled: stream(7, 1)
+flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+flutter: RiverpodTestWidget: build, id = 7
+flutter: StreamNotifierProvider watcher(7): disposed
+flutter: StreamNotifierProvider watcher(7): value = 1
+flutter: RiverpodTestWidget: read a value from the watcher, value = 1
+flutter: StreamProvider watcher(7): disposed
+flutter: StreamProvider watcher(7): value = AsyncValue<String>.data(value: stream(7, 1))
+flutter: [build end]------------------------------
+flutter: _StateNotifierController(7): invoked by the timer, state = 2
+flutter: StreamProvider(7): stream.listen() handled: stream(7, 2)
+flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+flutter: RiverpodTestWidget: build, id = 7
+flutter: StreamNotifierProvider watcher(7): disposed
+flutter: StreamNotifierProvider watcher(7): value = 2
+flutter: RiverpodTestWidget: read a value from the watcher, value = 2
+flutter: StreamProvider watcher(7): disposed
+flutter: StreamProvider watcher(7): value = AsyncValue<String>.data(value: stream(7, 2))
+flutter: [build end]------------------------------
+flutter: _StateNotifierController(7): invoked by the timer, state = 3
+flutter: StreamProvider(7): stream.listen() handled: stream(7, 3)
+flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+flutter: RiverpodTestWidget: build, id = 7
+flutter: StreamNotifierProvider watcher(7): disposed
+flutter: StreamNotifierProvider watcher(7): value = 3
+flutter: RiverpodTestWidget: read a value from the watcher, value = 3
+flutter: StreamProvider watcher(7): disposed
+flutter: StreamProvider watcher(7): value = AsyncValue<String>.data(value: stream(7, 3))
+flutter: [build end]------------------------------
+flutter: _StateNotifierController(7): invoked by the timer, state = 4
+flutter: StreamProvider(7): stream.listen() handled: stream(7, 4)
+flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+flutter: RiverpodTestWidget: build, id = 7
+flutter: StreamNotifierProvider watcher(7): disposed
+flutter: StreamNotifierProvider watcher(7): value = 4
+flutter: RiverpodTestWidget: read a value from the watcher, value = 4
+flutter: StreamProvider watcher(7): disposed
+flutter: StreamProvider watcher(7): value = AsyncValue<String>.data(value: stream(7, 4))
+flutter: [build end]------------------------------
+flutter: RiverpodTestWidget: invoked by the timer, id = 8
+flutter: [timer end]------------------------------
+flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+flutter: RiverpodTestWidget: build, id = 8
+flutter: StateNotifierProvider(8): created
+flutter: _StateNotifierController(0): startTimer
+flutter: StreamNotifierProvider watcher(8): value = 0
+flutter: RiverpodTestWidget: read a value from the watcher, value = 0
+flutter: StreamProvider(8): created
+flutter: StreamProvider watcher(8): value = AsyncValue<Never>.loading()
+flutter: riverpodTestFamilyProvider(8): created
+flutter: [build end]------------------------------
+flutter: StreamNotifierProvider watcher(7): disposed
+flutter: StreamProvider watcher(7): disposed
+flutter: StreamProvider(7): disposed
+flutter: StateNotifierProvider(7): disposed
+flutter: _StateNotifierController(7): disposed
+flutter: _StateNotifierController(7): timer is cancelled, state = 4
+flutter: _StateNotifierController(8): invoked by the timer, state = 1
+flutter: StreamProvider(8): stream.listen() handled: stream(8, 1)
+flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+flutter: RiverpodTestWidget: build, id = 8
+flutter: StreamNotifierProvider watcher(8): disposed
+flutter: StreamNotifierProvider watcher(8): value = 1
+flutter: RiverpodTestWidget: read a value from the watcher, value = 1
+flutter: StreamProvider watcher(8): disposed
+flutter: StreamProvider watcher(8): value = AsyncValue<String>.data(value: stream(8, 1))
+flutter: [build end]------------------------------
