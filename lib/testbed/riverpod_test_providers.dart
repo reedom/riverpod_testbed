@@ -56,8 +56,19 @@ final riverpodTestFamilyStateNotifierWatcherProvider =
     Provider.family.autoDispose<int, int>((ref, int id) {
   final value = ref.watch(riverpodTestFamilyStateNotifierProvider(id));
   debugPrint('StreamNotifierProvider watcher($id): value = $value');
-  ref.onDispose(
-      () => debugPrint('StreamNotifierProvider watcher($id): disposed'));
+
+  final subscription = ref
+      .read(riverpodTestFamilyStateNotifierProvider(id).notifier)
+      .stream
+      .listen((state) {
+    debugPrint('StreamNotifierProvider($id).stream.listen(): received, '
+        'value = $state');
+  });
+
+  ref.onDispose(() {
+    subscription.cancel();
+    debugPrint('StreamNotifierProvider watcher($id): disposed');
+  });
   return value;
 });
 

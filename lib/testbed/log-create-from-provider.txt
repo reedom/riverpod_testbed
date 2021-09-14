@@ -1,0 +1,27 @@
+Performing hot restart...
+Syncing files to device void...
+Restarted application in 664ms.
+flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+flutter: RiverpodTestCreateFromProviderWidget: build
+flutter: StateNotifierProvider(1): created
+flutter: _StateNotifierController(1): startTimer
+flutter: _readStateNotifier: value = 0
+flutter: StateNotifierProvider(0): created
+flutter: _StateNotifierController(0): startTimer
+flutter: _watchStateNotifier: value = 0
+flutter: StateNotifierProvider(1): disposed
+flutter: _StateNotifierController(1): disposed
+flutter: _StateNotifierController(1): timer is cancelled, state = 0
+flutter: _StateNotifierController(1): async task done
+flutter: _StateNotifierController(1): it's been unmounted!
+flutter: _StateNotifierController(0): async task done
+flutter: _StateNotifierController(0): invoked by the timer, state = 1
+flutter: _watchStateNotifier: disposed
+flutter: _watchStateNotifier: value = 1
+flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+flutter: RiverpodTestCreateFromProviderWidget: build
+flutter: _watchStateNotifier: disposed
+flutter: _readStateNotifier: disposed
+flutter: StateNotifierProvider(0): disposed
+flutter: _StateNotifierController(0): disposed
+flutter: _StateNotifierController(0): timer is cancelled, state = 1

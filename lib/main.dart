@@ -29,7 +29,7 @@ enum TestCase {
   createFromProvider,
 }
 
-class MyHomePage extends HookWidget {
+class MyHomePage extends HookWidget with WidgetsBindingObserver {
   MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
 
@@ -39,6 +39,11 @@ class MyHomePage extends HookWidget {
     final theme = Theme.of(context);
     final activeColor = theme.primaryColor;
     final inactiveColor = theme.primaryColorLight;
+
+    useEffect(() {
+      WidgetsBinding.instance!.addObserver(this);
+      return () => WidgetsBinding.instance!.removeObserver(this);
+    }, []);
 
     return Scaffold(
       appBar: AppBar(
@@ -95,5 +100,23 @@ class MyHomePage extends HookWidget {
         ),
       ),
     );
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    switch (state) {
+      case AppLifecycleState.resumed:
+        debugPrint('[resumed]');
+        break;
+      case AppLifecycleState.inactive:
+        debugPrint('[inactive]');
+        break;
+      case AppLifecycleState.paused:
+        debugPrint('[paused]');
+        break;
+      case AppLifecycleState.detached:
+        debugPrint('[detached]');
+        break;
+    }
   }
 }

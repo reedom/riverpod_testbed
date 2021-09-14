@@ -1,116 +1,104 @@
+Performing hot restart...
+Syncing files to device void...
+Restarted application in 688ms.
 flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-flutter: RiverpodTestCreationWidget: invoked by the timer(9) begin
-flutter: riverpodTestFamilyProvider(9): created
-flutter: StreamProvider(9): created
-flutter: StateNotifierProvider(9): created
-flutter: _StateNotifierController(9): startTimer
-flutter: StreamProvider watcher(9): value = AsyncValue<Never>.loading()
-flutter: RiverpodTestCreationWidget: invoked by the timer(9) end
+flutter: RiverpodTestCreationWidget: invoked by the timer(0) begin
+flutter: riverpodTestFamilyProvider(0): created
+flutter: StreamProvider(0): created
+flutter: StateNotifierProvider(0): created
+flutter: _StateNotifierController(0): startTimer
+flutter: StreamProvider watcher(0): value = AsyncValue<Never>.loading()
+flutter: RiverpodTestCreationWidget: invoked by the timer(0) end
 flutter: ------------------------------
-flutter: StateNotifierProvider(9): disposed
-flutter: _StateNotifierController(9): disposed
-flutter: _StateNotifierController(9): timer is cancelled, state = 0
-flutter: StreamProvider watcher(9): disposed
-flutter: StreamProvider(9): disposed
-flutter: _StateNotifierController(9): async task done
-flutter: _StateNotifierController(9): it's been unmounted!
+flutter: StateNotifierProvider(0): disposed
+flutter: _StateNotifierController(0): disposed
+flutter: _StateNotifierController(0): timer is cancelled, state = 0
+flutter: StreamProvider watcher(0): disposed
+flutter: StreamProvider(0): disposed
+flutter: _StateNotifierController(0): async task done
+flutter: _StateNotifierController(0): it's been unmounted!
 flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-flutter: RiverpodTestCreationWidget: invoked by the timer(9) begin
-flutter: riverpodTestFamilyProvider(9): created
-flutter: StreamProvider(9): created
-flutter: StateNotifierProvider(9): created
-flutter: _StateNotifierController(9): startTimer
-flutter: StreamProvider watcher(9): value = AsyncValue<Never>.loading()
-flutter: RiverpodTestCreationWidget: invoked by the timer(9) end
+flutter: RiverpodTestCreationWidget: invoked by the timer(0) begin
+flutter: riverpodTestFamilyProvider(0): created
+flutter: StreamProvider(0): created
+flutter: StateNotifierProvider(0): created
+flutter: _StateNotifierController(0): startTimer
+flutter: StreamProvider watcher(0): value = AsyncValue<Never>.loading()
+flutter: RiverpodTestCreationWidget: invoked by the timer(0) end
 flutter: ------------------------------
-flutter: StateNotifierProvider(9): disposed
-flutter: _StateNotifierController(9): disposed
-flutter: _StateNotifierController(9): timer is cancelled, state = 0
-flutter: StreamProvider watcher(9): disposed
-flutter: StreamProvider(9): disposed
-flutter: _StateNotifierController(9): async task done
-flutter: _StateNotifierController(9): it's been unmounted!
+flutter: StateNotifierProvider(0): disposed
+flutter: _StateNotifierController(0): disposed
+flutter: _StateNotifierController(0): timer is cancelled, state = 0
+flutter: StreamProvider watcher(0): disposed
+flutter: StreamProvider(0): disposed
+flutter: _StateNotifierController(0): async task done
+flutter: _StateNotifierController(0): it's been unmounted!
+flutter: [inactive]
 flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-flutter: RiverpodTestCreationWidget: invoked by the timer(9) begin
-flutter: riverpodTestFamilyProvider(9): created
-
-[background]
-flutter: StreamProvider(9): created
-flutter: StateNotifierProvider(9): created
-flutter: _StateNotifierController(9): startTimer
-flutter: StreamProvider watcher(9): value = AsyncValue<Never>.loading()
-flutter: RiverpodTestCreationWidget: invoked by the timer(9) end
+flutter: RiverpodTestCreationWidget: invoked by the timer(0) begin
+flutter: riverpodTestFamilyProvider(0): created
+flutter: StreamProvider(0): created
+flutter: StateNotifierProvider(0): created
+flutter: _StateNotifierController(0): startTimer
+flutter: StreamProvider watcher(0): value = AsyncValue<Never>.loading()
+flutter: RiverpodTestCreationWidget: invoked by the timer(0) end
 flutter: ------------------------------
-flutter: StateNotifierProvider(9): disposed
-flutter: _StateNotifierController(9): disposed
-flutter: _StateNotifierController(9): timer is cancelled, state = 0
-flutter: StreamProvider watcher(9): disposed
-flutter: StreamProvider(9): disposed
-flutter: _StateNotifierController(9): async task done
-flutter: _StateNotifierController(9): it's been unmounted!
+flutter: StateNotifierProvider(0): disposed
+flutter: _StateNotifierController(0): disposed
+flutter: _StateNotifierController(0): timer is cancelled, state = 0
+flutter: StreamProvider watcher(0): disposed
+flutter: StreamProvider(0): disposed
+flutter: [paused]
+flutter: _StateNotifierController(0): async task done
+flutter: _StateNotifierController(0): it's been unmounted!
+Can't end BackgroundTask: no background task exists with identifier 11 (0xb), or it may have already been ended. Break in UIApplicationEndBackgroundTaskError() to debug.
 flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-flutter: RiverpodTestCreationWidget: invoked by the timer(9) begin
-flutter: riverpodTestFamilyProvider(9): created
-flutter: StreamProvider(9): created
-flutter: StateNotifierProvider(9): created
-flutter: _StateNotifierController(9): startTimer
-flutter: StreamProvider watcher(9): value = AsyncValue<Never>.loading()
-flutter: RiverpodTestCreationWidget: invoked by the timer(9) end
+flutter: RiverpodTestCreationWidget: invoked by the timer(0) begin
+flutter: riverpodTestFamilyProvider(0): created
+flutter: StreamProvider(0): created
+flutter: StateNotifierProvider(0): created
+flutter: _StateNotifierController(0): startTimer
+flutter: StreamProvider watcher(0): value = AsyncValue<Never>.loading()
+flutter: RiverpodTestCreationWidget: invoked by the timer(0) end
 flutter: ------------------------------
-flutter: StateNotifierProvider(9): disposed
-flutter: _StateNotifierController(9): disposed
-flutter: _StateNotifierController(9): timer is cancelled, state = 0
-flutter: StreamProvider watcher(9): disposed
-flutter: StreamProvider(9): disposed
-flutter: _StateNotifierController(9): async task done
-flutter: _StateNotifierController(9): it's been unmounted!
+flutter: StateNotifierProvider(0): disposed
+flutter: _StateNotifierController(0): disposed
+flutter: _StateNotifierController(0): timer is cancelled, state = 0
+flutter: StreamProvider watcher(0): disposed
+flutter: StreamProvider(0): disposed
+flutter: _StateNotifierController(0): async task done
+flutter: _StateNotifierController(0): it's been unmounted!
+flutter: [inactive]
 flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-flutter: RiverpodTestCreationWidget: invoked by the timer(10) begin
-flutter: riverpodTestFamilyProvider(10): created
-flutter: StreamProvider(10): created
-flutter: StateNotifierProvider(10): created
-flutter: _StateNotifierController(10): startTimer
-flutter: StreamProvider watcher(10): value = AsyncValue<Never>.loading()
-flutter: RiverpodTestCreationWidget: invoked by the timer(10) end
+flutter: RiverpodTestCreationWidget: invoked by the timer(1) begin
+flutter: riverpodTestFamilyProvider(1): created
+flutter: StreamProvider(1): created
+flutter: StateNotifierProvider(1): created
+flutter: _StateNotifierController(1): startTimer
+flutter: StreamProvider watcher(1): value = AsyncValue<Never>.loading()
+flutter: RiverpodTestCreationWidget: invoked by the timer(1) end
 flutter: ------------------------------
-flutter: StateNotifierProvider(10): disposed
-flutter: _StateNotifierController(10): disposed
-flutter: _StateNotifierController(10): timer is cancelled, state = 0
-flutter: StreamProvider watcher(10): disposed
-flutter: StreamProvider(10): disposed
-flutter: _StateNotifierController(10): async task done
-flutter: _StateNotifierController(10): it's been unmounted!
-
-
+flutter: StateNotifierProvider(1): disposed
+flutter: _StateNotifierController(1): disposed
+flutter: _StateNotifierController(1): timer is cancelled, state = 0
+flutter: StreamProvider watcher(1): disposed
+flutter: StreamProvider(1): disposed
+flutter: _StateNotifierController(1): async task done
+flutter: _StateNotifierController(1): it's been unmounted!
+flutter: [resumed]
 flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-flutter: RiverpodTestCreationWidget: invoked by the timer(10) begin
-flutter: riverpodTestFamilyProvider(10): created
-flutter: StreamProvider(10): created
-flutter: StateNotifierProvider(10): created
-flutter: _StateNotifierController(10): startTimer
-flutter: StreamProvider watcher(10): value = AsyncValue<Never>.loading()
-flutter: RiverpodTestCreationWidget: invoked by the timer(10) end
+flutter: RiverpodTestCreationWidget: invoked by the timer(1) begin
+flutter: riverpodTestFamilyProvider(1): created
+flutter: StreamProvider(1): created
+flutter: StateNotifierProvider(1): created
+flutter: _StateNotifierController(1): startTimer
+flutter: StreamProvider watcher(1): value = AsyncValue<Never>.loading()
+flutter: RiverpodTestCreationWidget: invoked by the timer(1) end
 flutter: ------------------------------
-flutter: StateNotifierProvider(10): disposed
-flutter: _StateNotifierController(10): disposed
-flutter: _StateNotifierController(10): timer is cancelled, state = 0
-flutter: StreamProvider watcher(10): disposed
-flutter: StreamProvider(10): disposed
-flutter: _StateNotifierController(10): async task done
-flutter: _StateNotifierController(10): it's been unmounted!
-flutter: -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-flutter: RiverpodTestCreationWidget: invoked by the timer(10) begin
-flutter: riverpodTestFamilyProvider(10): created
-flutter: StreamProvider(10): created
-flutter: StateNotifierProvider(10): created
-flutter: _StateNotifierController(10): startTimer
-flutter: StreamProvider watcher(10): value = AsyncValue<Never>.loading()
-flutter: RiverpodTestCreationWidget: invoked by the timer(10) end
-flutter: ------------------------------
-flutter: StateNotifierProvider(10): disposed
-flutter: _StateNotifierController(10): disposed
-flutter: _StateNotifierController(10): timer is cancelled, state = 0
-flutter: StreamProvider watcher(10): disposed
-flutter: StreamProvider(10): disposed
-flutter: _StateNotifierController(10): async task done
-flutter: _StateNotifierController(10): it's been unmounted!
+flutter: StateNotifierProvider(1): disposed
+flutter: _StateNotifierController(1): disposed
+flutter: _StateNotifierController(1): timer is cancelled, state = 0
+flutter: StreamProvider watcher(1): disposed
+flutter: StreamProvider(1): disposed
+flutter: _StateNotifierController(1): async task done
+flutter: _StateNotifierController(1): it's been unmounted!
