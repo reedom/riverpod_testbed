@@ -1,6 +1,21 @@
 Flutter/Widget/Riverpodの挙動に関して
 =================================
 
+### Provider内でProviderを生成した場合
+
+__Provider__
+- read/watchともに生成可能
+  - ただしreadの場合、Flutterの次処理フレームで自動破棄される
+    - StateNotifierProviderは、自動破棄されるまでは`mount`された状態
+  - watchの場合、生成インスタンスは生き続ける
+
+### イベントハンドラ内でProviderを生成した場合
+
+__Provider__
+- read/watchともに生成可能
+  - ただしFlutterの次処理フレームで自動破棄される
+    - StateNotifierProviderは、自動破棄されるまでは`mount`された状態
+
 ### アプリがバックグラウンドにいる場合
 
 __Flutter/Widget__
@@ -24,10 +39,3 @@ __Flutter/Widget__
 __Riverpod__
 - Widget.build()を契機に処理が走る
     - ただしバックグラウンド中に発生した更新イベントは無視（破棄）されている
-
-
-### イベントハンドラ内でProviderを生成した場合
-
-__Provider__
-- 生成可能。ただしFlutterの次処理フレームで自動破棄される
-- StateNotifierProviderは、自動破棄されるまでは`mount`された状態

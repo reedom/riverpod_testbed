@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_testbed/testbed/riverpod_test_access_widget.dart';
+import 'package:riverpod_testbed/testbed/riverpod_test_create_from_provider.dart';
 import 'package:riverpod_testbed/testbed/riverpod_test_creation_widget.dart';
 
 void main() {
@@ -21,13 +22,20 @@ class MyApp extends StatelessWidget {
   }
 }
 
+enum TestCase {
+  none,
+  assessing,
+  creation,
+  createFromProvider,
+}
+
 class MyHomePage extends HookWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
   Widget build(BuildContext context) {
-    final state = useState(true);
+    final state = useState(TestCase.none);
     final theme = Theme.of(context);
     final activeColor = theme.primaryColor;
     final inactiveColor = theme.primaryColorLight;
@@ -40,29 +48,48 @@ class MyHomePage extends HookWidget {
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  OutlinedButton(
-                    onPressed: () => state.value = true,
-                    child: Text('Test accessing',
-                        style: TextStyle(
-                            color: state.value ? activeColor : inactiveColor)),
-                  ),
-                  SizedBox(width: 20),
-                  OutlinedButton(
-                    onPressed: () => state.value = false,
-                    child: Text('Test creation',
-                        style: TextStyle(
-                            color: !state.value ? activeColor : inactiveColor)),
-                  ),
-                ],
+            children: [
+              OutlinedButton(
+                onPressed: () => state.value = TestCase.none,
+                child: Text('STOP',
+                    style: TextStyle(
+                        color: state.value == TestCase.none
+                            ? theme.errorColor
+                            : theme.errorColor.withAlpha(40))),
               ),
-              if (state.value)
+              SizedBox(width: 20),
+              OutlinedButton(
+                onPressed: () => state.value = TestCase.assessing,
+                child: Text('accessing',
+                    style: TextStyle(
+                        color: state.value == TestCase.assessing
+                            ? activeColor
+                            : inactiveColor)),
+              ),
+              SizedBox(width: 20),
+              OutlinedButton(
+                onPressed: () => state.value = TestCase.creation,
+                child: Text('creation',
+                    style: TextStyle(
+                        color: state.value == TestCase.creation
+                            ? activeColor
+                            : inactiveColor)),
+              ),
+              SizedBox(width: 20),
+              OutlinedButton(
+                onPressed: () => state.value = TestCase.createFromProvider,
+                child: Text('create from provider',
+                    style: TextStyle(
+                        color: state.value == TestCase.createFromProvider
+                            ? activeColor
+                            : inactiveColor)),
+              ),
+              if (state.value == TestCase.assessing)
                 RiverpodTestAccessWidget()
-              else
-                RiverpodTestCreationWidget(),
+              else if (state.value == TestCase.creation)
+                RiverpodTestCreationWidget()
+              else if (state.value == TestCase.createFromProvider)
+                RiverpodTestCreateFromProviderWidget()
             ],
           ),
         ),
