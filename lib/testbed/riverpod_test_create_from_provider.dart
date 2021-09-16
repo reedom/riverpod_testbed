@@ -12,6 +12,8 @@ class RiverpodTestCreateFromProviderWidget extends HookWidget {
     debugPrint('RiverpodTestCreateFromProviderWidget: build');
     useProvider(_readStateNotifier);
     useProvider(_watchStateNotifier);
+    useProvider(_readNotifier);
+    useProvider(_watchNotifier);
     return const SizedBox.shrink();
   }
 }
@@ -28,4 +30,14 @@ final _readStateNotifier = Provider.autoDispose<int>((ref) {
   debugPrint('_readStateNotifier: value = $value');
   ref.onDispose(() => debugPrint('_readStateNotifier: disposed'));
   return value;
+});
+
+final _watchNotifier = Provider.autoDispose<void>((ref) {
+  ref.watch(riverpodTestFamilyStateNotifierProvider(2).notifier);
+  ref.onDispose(() => debugPrint('_watchNotifier: disposed'));
+});
+
+final _readNotifier = Provider.autoDispose<void>((ref) {
+  ref.read(riverpodTestFamilyStateNotifierProvider(3).notifier);
+  ref.onDispose(() => debugPrint('_readNotifier: disposed'));
 });

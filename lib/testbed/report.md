@@ -8,6 +8,7 @@ __Provider__
   - ただしreadの場合、Flutterの次処理フレームで自動破棄される
     - StateNotifierProviderは、自動破棄されるまでは`mount`された状態
   - watchの場合、生成インスタンスは生き続ける
+  - state/notifierのどちらを参照しても寿命は一緒
 
 ### イベントハンドラ内でProviderを生成した場合
 
