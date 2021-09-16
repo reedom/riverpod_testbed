@@ -1,23 +1,39 @@
 Flutter/Widget/Riverpodの挙動に関して
 =================================
 
-### Provider内でProviderを生成した場合
+### Provider内から他のProviderを生成
 
-__Provider__
+__生成できるか__
 - read/watchともに生成可能
-  - ただしreadの場合、Flutterの次処理フレームで自動破棄される
-    - StateNotifierProviderは、自動破棄されるまでは`mount`された状態
-  - watchの場合、生成インスタンスは生き続ける
-  - state/notifierのどちらを参照しても寿命は一緒
 
-### イベントハンドラ内でProviderを生成した場合
+__挙動__
+- readの場合、Flutterの次処理フレームで自動破棄される
+  - StateNotifierProviderは、自動破棄されるまでは`mount`された状態
+- watchの場合、生成インスタンスは生き続ける
+- state/notifierのどちらを参照しても寿命は一緒
 
-__Provider__
+### イベントハンドラ内から他のProviderを生成
+
+__生成できるか__
 - read/watchともに生成可能
-  - ただしFlutterの次処理フレームで自動破棄される
-    - StateNotifierProviderは、自動破棄されるまでは`mount`された状態
+ 
+__挙動__
+- Flutterの次処理フレームで自動破棄される
+- StateNotifierProviderは、自動破棄されるまでは`mount`された状態
 
-### アプリがバックグラウンドにいる場合
+### 通常の挙動
+
+__生存管理__
+- read(provider)した場合、参照は保持され続けない
+  - readした時点で対象インスタンスの生成または参照+1が行われ、実行フレームが終了すると参照-1される 
+- watch(provider)した場合、参照は保持され続ける
+- watch(stateNotifierProvider.notifier)も、同様に参照は保持され続ける
+
+__変更監視__
+- watch(stateNotifierProvider.notifier)した場合、stateが変化しても検知はしない
+  - よって`Widget.build`やprovider内処理の再実行は発生しない
+
+### アプリがバックグラウンドにいる場合の挙動
 
 __Flutter/Widget__
 - Widget.build()は呼ばれない
@@ -31,7 +47,7 @@ __Riverpod__
     - stateの内容は即座に更新される
 
 
-### アプリがバックグラウンドから復帰した場合
+### アプリがバックグラウンドから復帰した場合の挙動
 
 __Flutter/Widget__
 - Widget.build()が呼ばれる
