@@ -1,7 +1,6 @@
-import 'dart:async';
-
 import 'package:flutter/cupertino.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:riverpod_testbed/testbed/controllers/periodic_value_controller.dart';
 
 /// Test whether a Provider can be created while the app is in the background.
 final riverpodTestFamilyProvider =
@@ -18,10 +17,10 @@ final riverpodTestFamilyProvider =
 /// - The StateNotifier changes its state 1time/1sec.
 /// - The StateNotifier omits new stream value 1time/1sec.
 final riverpodTestFamilyStateNotifierProvider = StateNotifierProvider.family
-    .autoDispose<_StateNotifierController, int, int>((ref, int id) {
+    .autoDispose<PeriodicValueController, int, int>((ref, int id) {
   debugPrint('StateNotifierProvider($id): created');
-  final controller = _StateNotifierController(id)..startTimer();
-  ref.onDispose(() => debugPrint('StateNotifierProvider($id): disposed'));
+  final controller = PeriodicValueController(ref.read, '$id')..startTimer();
+  ref.onDispose(controller.dispose);
   return controller;
 });
 
@@ -80,71 +79,3 @@ final riverpodTestFamilyStreamNotifierWatcherProvider =
   debugPrint('StreamProvider watcher($id): value = $value');
   ref.onDispose(() => debugPrint('StreamProvider watcher($id): disposed'));
 });
-
-class _StateNotifierController extends StateNotifier<int> {
-  _StateNotifierController(int id)
-      : _id = '$id',
-        super(0);
-
-  final String _id;
-  final _streamController = StreamController<String>.broadcast();
-
-  Stream<String> get valueStream => _streamController.stream;
-
-  Timer? _timer;
-
-  @override
-  void dispose() {
-    debugPrint('_StateNotifierController($_id): disposed');
-    _streamController.close();
-    cancelTimer();
-    super.dispose();
-  }
-
-  Future<void> startTimer() async {
-    try {
-      if (!mounted) {
-        debugPrint(
-            '_StateNotifierController.startTimer: it\'s been unmounted!');
-        return;
-      }
-      debugPrint('_StateNotifierController($_id): startTimer');
-      _timer ??= Timer.periodic(const Duration(seconds: 1), (timer) {
-        if (!mounted) {
-          debugPrint('_StateNotifierController($_id): invoked by the timer '
-              'but it\'s been unmounted!');
-          return;
-        }
-
-        state = state + 1;
-        debugPrint('_StateNotifierController($_id): invoked by the timer, '
-            'state = $state');
-        _streamController.add('stream($_id, $state)');
-      });
-
-      await Future<void>.delayed(const Duration(milliseconds: 10));
-      debugPrint('_StateNotifierController($_id): async task done');
-      if (!mounted) {
-        debugPrint('_StateNotifierController($_id): it\'s been unmounted!');
-      }
-      Future<void>.delayed(Duration.zero).then((_) => 'done');
-      // ignore: avoid_catches_without_on_clauses
-    } catch (err) {
-      debugPrint(
-          '_StateNotifierController($_id): startTime cought an exception!');
-    }
-  }
-
-  void cancelTimer() {
-    try {
-      debugPrint('_StateNotifierController($_id): timer is cancelled, '
-          'state = $state');
-      _timer?.cancel();
-      _timer = null;
-      // ignore: avoid_catches_without_on_clauses
-    } catch (err) {
-      debugPrint(
-          '_StateNotifierController($_id): cancelTime cought an exception!');
-    }
-  }
-}

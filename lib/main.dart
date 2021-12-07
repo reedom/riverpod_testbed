@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:riverpod_testbed/testbed/riverpod_test_access_widget.dart';
-import 'package:riverpod_testbed/testbed/riverpod_test_create_from_provider.dart';
-import 'package:riverpod_testbed/testbed/riverpod_test_creation_widget.dart';
+import 'package:riverpod_testbed/testbed/create_in_provider.dart';
+import 'package:riverpod_testbed/testbed/create_in_widget.dart';
+import 'package:riverpod_testbed/testbed/widgets/menu.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -49,54 +49,26 @@ class MyHomePage extends HookWidget with WidgetsBindingObserver {
       appBar: AppBar(
         title: Text(title),
       ),
-      body: ProviderScope(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              OutlinedButton(
-                onPressed: () => state.value = TestCase.none,
-                child: Text('STOP',
-                    style: TextStyle(
-                        color: state.value == TestCase.none
-                            ? theme.errorColor
-                            : theme.errorColor.withAlpha(40))),
+      body: Center(
+        child: ListView(
+          children: [
+            Menu(
+              'Create providers in a Widget',
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => CreateInWidgetPage(),
+                ),
               ),
-              SizedBox(width: 20),
-              OutlinedButton(
-                onPressed: () => state.value = TestCase.assessing,
-                child: Text('accessing',
-                    style: TextStyle(
-                        color: state.value == TestCase.assessing
-                            ? activeColor
-                            : inactiveColor)),
+            ),
+            Menu(
+              'Create providers in providers',
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => CreateInProviderPage(),
+                ),
               ),
-              SizedBox(width: 20),
-              OutlinedButton(
-                onPressed: () => state.value = TestCase.creation,
-                child: Text('creation',
-                    style: TextStyle(
-                        color: state.value == TestCase.creation
-                            ? activeColor
-                            : inactiveColor)),
-              ),
-              SizedBox(width: 20),
-              OutlinedButton(
-                onPressed: () => state.value = TestCase.createFromProvider,
-                child: Text('create from provider',
-                    style: TextStyle(
-                        color: state.value == TestCase.createFromProvider
-                            ? activeColor
-                            : inactiveColor)),
-              ),
-              if (state.value == TestCase.assessing)
-                RiverpodTestAccessWidget()
-              else if (state.value == TestCase.creation)
-                RiverpodTestCreationWidget()
-              else if (state.value == TestCase.createFromProvider)
-                RiverpodTestCreateFromProviderWidget()
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

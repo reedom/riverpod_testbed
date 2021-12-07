@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_testbed/testbed/riverpod_test_providers.dart';
 
-class RiverpodTestCreateFromProviderWidget extends HookWidget {
+class RiverpodTestCreateFromProviderWidget extends HookConsumerWidget {
   const RiverpodTestCreateFromProviderWidget({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     debugPrint('-=' * 60);
     debugPrint('RiverpodTestCreateFromProviderWidget: build');
-    useProvider(_readStateNotifier);
-    useProvider(_watchStateNotifier);
-    useProvider(_readNotifier);
-    useProvider(_watchNotifier);
+    ref.watch(_readStateNotifier);
+    ref.watch(_watchStateNotifier);
+    ref.watch(_readNotifier);
+    ref.watch(_watchNotifier);
+    ref.watch(_listenNotifier);
     return const SizedBox.shrink();
   }
 }
@@ -40,4 +40,10 @@ final _watchNotifier = Provider.autoDispose<void>((ref) {
 final _readNotifier = Provider.autoDispose<void>((ref) {
   ref.read(riverpodTestFamilyStateNotifierProvider(3).notifier);
   ref.onDispose(() => debugPrint('_readNotifier: disposed'));
+});
+
+final _listenNotifier = Provider.autoDispose<void>((ref) {
+  ref.listen(
+      riverpodTestFamilyStateNotifierProvider(4).notifier, (prev, next) {});
+  ref.onDispose(() => debugPrint('_listenNotifier: disposed'));
 });

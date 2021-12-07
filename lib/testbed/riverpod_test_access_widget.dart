@@ -5,11 +5,11 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_testbed/testbed/riverpod_test_providers.dart';
 
-class RiverpodTestAccessWidget extends HookWidget {
+class RiverpodTestAccessWidget extends HookConsumerWidget {
   const RiverpodTestAccessWidget({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final id = useState(1);
     debugPrint('-=' * 60);
     debugPrint('RiverpodTestWidget: build, id = ${id.value}');
@@ -29,13 +29,13 @@ class RiverpodTestAccessWidget extends HookWidget {
       return timer.cancel;
     }, []);
 
-    useProvider(riverpodTestFamilyStateNotifierProvider(id.value));
+    ref.watch(riverpodTestFamilyStateNotifierProvider(id.value));
     final value =
-        useProvider(riverpodTestFamilyStateNotifierWatcherProvider(id.value));
+        ref.watch(riverpodTestFamilyStateNotifierWatcherProvider(id.value));
     debugPrint('RiverpodTestWidget: read a value from the watcher, '
         'value = $value');
-    useProvider(riverpodTestFamilyStreamNotifierWatcherProvider(id.value));
-    useProvider(riverpodTestFamilyProvider(id.value));
+    ref.watch(riverpodTestFamilyStreamNotifierWatcherProvider(id.value));
+    ref.watch(riverpodTestFamilyProvider(id.value));
     debugPrint('[build end] ${'-' * 30}');
     return const SizedBox.shrink();
   }
