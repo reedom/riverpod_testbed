@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:riverpod_testbed/testbed/create_in_provider.dart';
-import 'package:riverpod_testbed/testbed/create_in_widget.dart';
+import 'package:riverpod_testbed/testbed/pages/create_in_provider.dart';
+import 'package:riverpod_testbed/testbed/pages/create_in_widget.dart';
 import 'package:riverpod_testbed/testbed/widgets/menu.dart';
 
 void main() {
@@ -35,11 +35,6 @@ class MyHomePage extends HookWidget with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    final state = useState(TestCase.none);
-    final theme = Theme.of(context);
-    final activeColor = theme.primaryColor;
-    final inactiveColor = theme.primaryColorLight;
-
     useEffect(() {
       WidgetsBinding.instance!.addObserver(this);
       return () => WidgetsBinding.instance!.removeObserver(this);
