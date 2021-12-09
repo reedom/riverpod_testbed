@@ -4,6 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_testbed/testbed/pages/create_in_provider.dart';
 import 'package:riverpod_testbed/testbed/pages/create_in_widget.dart';
 import 'package:riverpod_testbed/testbed/pages/listen_change_state.dart';
+import 'package:riverpod_testbed/testbed/pages/order_of_listen_watch.dart';
 import 'package:riverpod_testbed/testbed/widgets/menu.dart';
 
 void main() {
@@ -69,6 +70,14 @@ class MyHomePage extends HookWidget with WidgetsBindingObserver {
               onTap: () => Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) => ListenChangeStatePage(),
+                ),
+              ),
+            ),
+            Menu(
+              'In what order do ref.listen and ref.watch occur respectively?',
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => OrderOfListenWatchPage(),
                 ),
               ),
             ),
