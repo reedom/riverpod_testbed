@@ -3,6 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_testbed/testbed/pages/create_in_provider.dart';
 import 'package:riverpod_testbed/testbed/pages/create_in_widget.dart';
+import 'package:riverpod_testbed/testbed/pages/listen_change_state.dart';
 import 'package:riverpod_testbed/testbed/widgets/menu.dart';
 
 void main() {
@@ -60,6 +61,14 @@ class MyHomePage extends HookWidget with WidgetsBindingObserver {
               onTap: () => Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) => CreateInProviderPage(),
+                ),
+              ),
+            ),
+            Menu(
+              'Is it safe to change state in a ref.listen callback?',
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => ListenChangeStatePage(),
                 ),
               ),
             ),

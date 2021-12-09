@@ -18,6 +18,10 @@ class ProviderStateController extends StateNotifier<ProviderState> {
   void disposed() {
     state = state.copyWith(disposedTimes: state.disposedTimes + 1);
   }
+
+  void gotException() {
+    state = state.copyWith(exceptionTimes: state.exceptionTimes + 1);
+  }
 }
 
 class ProviderState {
@@ -26,19 +30,27 @@ class ProviderState {
     this.value = 0,
     this.createdTimes = 0,
     this.disposedTimes = 0,
+    this.exceptionTimes = 0,
   });
 
   final String id;
   final int value;
   final int createdTimes;
   final int disposedTimes;
+  final int exceptionTimes;
 
-  ProviderState copyWith({int? value, int? createdTimes, int? disposedTimes}) {
+  ProviderState copyWith({
+    int? value,
+    int? createdTimes,
+    int? disposedTimes,
+    int? exceptionTimes,
+  }) {
     return ProviderState(
       id: id,
       value: value ?? this.value,
       createdTimes: createdTimes ?? this.createdTimes,
       disposedTimes: disposedTimes ?? this.disposedTimes,
+      exceptionTimes: exceptionTimes ?? this.exceptionTimes,
     );
   }
 }
